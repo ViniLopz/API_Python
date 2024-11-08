@@ -125,6 +125,7 @@ def deletar_servico(servico_id: int, db: Session = Depends(get_db)):
     db.delete(db_servico)
     db.commit()
     return {"detail": "Serviço deletado com sucesso"}
+    
 
 # --- Cálculo de Orçamento ---
 class ProdutoOrcamento(BaseModel):
