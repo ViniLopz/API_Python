@@ -1,0 +1,231 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos globais */
+html, body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Container principal do conteúdo (content) */
+.content {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo na tela */
+  align-items: flex-start; 
+  height: auto; 
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box; 
+  overflow-y: auto;
+  font-family: 'poppis';
+}
+
+
+/* Container principal do orçamento */
+.orcamento-container {
+  width: 100%; 
+  max-width: 1200px; 
+  display: flex; /* Alterado para flex para dispor os quadros lado a lado */
+  flex-direction: column; /* A lista de produtos e total abaixo */
+  gap: 20px; 
+  margin-right: 200px;
+}
+
+/* Quadro para os produtos e serviços */
+.top-row {
+  display: flex; /* Mantém os quadros lado a lado */
+  gap: 20px; /* Espaço entre os quadros */
+  flex-wrap: wrap; /* Permite que os quadros se movam para a próxima linha se necessário */
+}
+
+/* Estilos comuns para quadros */
+.quadro {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%; /* Garante que os quadros ocupem toda a largura disponível */
+}
+
+/* Quadro de Produto e Serviços */
+/* Quadro de Produto e Serviços */
+.produto-box, .servicos-box {
+  flex: 1; /* Faz com que os quadros ocupem espaço igual */
+  min-width: 250px; /* Define uma largura mínima para os quadros */
+}
+/* Centraliza os títulos dos quadros */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Groups para organizar as entradas */
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Organiza os inputs em 2 colunas */
+.produto-inputs, .servico-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colunas responsivas */
+  gap: 10px;
+}
+
+/* Botões */
+
+
+
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ajuste para a caixa de Valor de Custo Total */
+.total-box input {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Quadro de total */
+.total-box {
+  background-color: #ffffff; /* Adicionei para manter a consistência */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+/* Responsividade */
+@media (max-width: 1023px) {
+  .orcamento-container {
+    flex-direction: column; /* Uma coluna em telas menores */
+  }
+
+  .top-row {
+    flex-direction: column; /* Mudança para coluna em telas menores */
+  }
+
+  .produto-inputs, .servico-inputs {
+    grid-template-columns: 1fr; 
+  }
+
+  .add-button {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .produto-box, .servicos-box, .total-box {
+    padding: 15px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .input-group label {
+    font-size: 14px; 
+  }
+
+  .input-group input {
+    font-size: 14px; 
+  }
+
+  .add-button {
+    padding: 10px; 
+    font-size: 14px; 
+  }
+
+  .total-box input {
+    font-size: 16px; 
+  }
+}
+
+/* Estilos adicionais */
+.produtos-adicionados-box, .total-box {
+  width: 100%;
+}
+
+.lista-produtos {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.produto-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mensagem-vazia {
+  color: #888;
+  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Estilo para alinhar o botão na parte inferior do quadro */
+.produto-box, .servicos-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaça o conteúdo para que o botão vá para o final */
+  
+}
+
+
+
+
+.button-group {
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.produto-box, .servicos-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 5px;
+  align-self: center; /* Centraliza os botões */
+  width: 170px; /* Define uma largura fixa para os botões */
+  text-align: center;
+  height: 40px; /* Ajusta a altura dos botões */
+}
+
+

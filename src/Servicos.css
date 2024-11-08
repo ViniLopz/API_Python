@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos globais */
+html, body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Container principal do conteúdo (content) */
+.content {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  min-height: 100vh; /* Ocupa a altura total da tela */
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+  width: 100%; /* O content ocupa toda a largura */
+}
+
+/* Estilo do quadro de cadastro */
+.formulario-cadastro {
+  background-color: #fff;
+  padding: 50px; /* Ajusta o padding para melhor responsividade */
+  border-radius: 20px; /* Reduz o raio da borda para melhor ajuste */
+  width: 100%;
+  max-width: 800px; /* Reduz o limite máximo de largura */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Um pouco de sombra */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evita rolagem horizontal dentro do quadro */
+}
+
+/* Estilo dos títulos */
+.formulario-cadastro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo para os inputs */
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Grupo de botões */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.button-group button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de produtos */
+.lista-produtos {
+  
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 150px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-top: 30px; /* Ajuste o valor conforme necessário */
+}
+
+button {
+  margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.lista-produtos p {
+  color: #888;
+  text-align: center;
+}
+
+/* Total de produtos */
+.formulario-cadastro p {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 1023px) {
+  .formulario-cadastro {
+    padding: 30px; /* Ajusta o padding para telas menores */
+  }
+
+  .button-group {
+    flex-direction: column; /* Organiza os botões em coluna em telas menores */
+    gap: 10px; /* Adiciona espaço entre os botões */
+  }
+}
+
+@media (max-width: 768px) {
+  .formulario-cadastro {
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+
+  .input-group label, .input-group input {
+    font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
+  }
+
+  .button-group button {
+    padding: 10px; /* Ajusta o padding dos botões em telas menores */
+    font-size: 14px; /* Reduz o tamanho da fonte dos botões em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-cadastro {
+    padding: 15px; /* Reduz o padding em telas muito pequenas */
+  }
+
+  .input-group label, .input-group input {
+    font-size: 12px; /* Reduz o tamanho da fonte em telas muito pequenas */
+  }
+
+  .button-group button {
+    padding: 8px; /* Ajusta o padding dos botões em telas muito pequenas */
+    font-size: 12px; /* Reduz o tamanho da fonte dos botões em telas muito pequenas */
+  }
+
+  .lista-produtos {
+    padding: 15px; /* Ajusta o padding da lista de produtos em telas muito pequenas */
+  }
+
+  .formulario-cadastro p {
+    font-size: 16px; /* Ajusta o tamanho da fonte do total de produtos */
+  }
+}
